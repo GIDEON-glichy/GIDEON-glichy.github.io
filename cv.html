@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gideon Manyara Kamanda — Curriculum Vitae</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%23ffffff' font-size='48' font-weight='900' font-family='sans-serif'>GK</text></svg>">
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 15mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      background: #f1f5f9;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      padding-bottom: 40px;
+    }
+
+    /* Screen Action Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 1px solid #cbd5e1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 860px;
+      margin: 0 auto 24px;
+      border-radius: 0 0 12px 12px;
+    }
+    .top-bar a, .top-bar button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 9.5pt;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 150ms ease;
+    }
+    .btn-back {
+      background: #f8fafc;
+      border-color: #cbd5e1 !important;
+      color: #334155;
+    }
+    .btn-back:hover {
+      background: #e2e8f0;
+    }
+    .btn-print {
+      background: #2563eb;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    }
+
+    .cv-sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 44px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2.5px solid #2563eb;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .subtitle {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 5px;
+      margin-bottom: 6px;
+    }
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 9pt;
+      color: #475569;
+    }
+    .contact-line a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #334155;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+
+    /* Entries */
+    .entry {
+      margin-bottom: 14px;
+    }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .entry-title {
+      font-weight: 800;
+      font-size: 10.2pt;
+      color: #0f172a;
+    }
+    .entry-company {
+      font-weight: 600;
+      font-size: 9.2pt;
+      color: #475569;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    .entry-date {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #64748b;
+    }
+    .project-role-tech {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 4px;
+    }
+    li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+      font-size: 9.3pt;
+      color: #334155;
+      line-height: 1.5;
+    }
+    li::before {
+      content: "-";
+      position: absolute;
+      left: 2px;
+      color: #334155;
+      font-weight: bold;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+      margin-top: 8px;
+    }
+    .skill-block strong {
+      display: block;
+      font-size: 9.2pt;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .skill-block span {
+      font-size: 9pt;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .top-bar {
+        display: none !important;
+      }
+      .cv-sheet {
+        box-shadow: none;
+        border: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Screen Floating Control Bar -->
+  <aside class="top-bar" aria-label="CV controls">
+    <a class="btn-back" href="index.html">
+      ← Back to Portfolio
+    </a>
+    <button class="btn-print" type="button" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Download / Print as PDF
+    </button>
+  </aside>
+
+  <main class="cv-sheet">
+    <header>
+      <h1>GIDEON MANYARA KAMANDA</h1>
+      <div class="subtitle">Computer Science Student | Software Engineering | IT and Industrial Automation</div>
+      <div class="contact-line">
+        <span>📍 Nairobi, Kenya</span>
+        <span>📞 <a href="https://wa.me/254757843408">+254 757 843 408</a></span>
+        <span>✉️ <a href="mailto:gideonkamanda49@gmail.com">gideonkamanda49@gmail.com</a></span>
+      </div>
+      <div class="contact-line" style="margin-top: 4px;">
+        <span>💼 <a href="https://www.linkedin.com/in/gideon-kamanda-863890294" target="_blank" rel="noreferrer">linkedin.com/in/gideon-kamanda-863890294</a></span>
+        <span>🌐 <a href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">github.com/GIDEON-glichy</a></span>
+      </div>
+    </header>
+
+    <!-- Professional Profile -->
+    <section>
+      <h2>PROFESSIONAL PROFILE</h2>
+      <p>
+        Computer Science student at Karatina University with practical experience in software development, backend systems, databases, industrial networking, utility monitoring, and automation. Skilled in building full-stack applications with React, FastAPI, PostgreSQL, Docker, and REST APIs. Gained hands-on industrial exposure at Coca-Cola Beverages Kenya through technical documentation, network communication checks, Modbus TCP metering concepts, MES environments, and production-line systems. A proactive problem solver with strong technical writing, research, teamwork, communication, and learning ability.
+      </p>
+    </section>
+
+    <!-- Industrial Experience -->
+    <section>
+      <h2>INDUSTRIAL EXPERIENCE</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Automation / IT Intern - Industrial Attachment</span>
+          <span class="entry-date">15 June 2026 — 28 August 2026</span>
+        </div>
+        <div class="entry-company">Coca-Cola Beverages Kenya, Nairobi</div>
+        <ul>
+          <li>Supported the assessment and documentation of industrial utility-metering infrastructure involving approximately 30 electrical meters and 30-40 water meters.</li>
+          <li>Documented communication paths between meters, network switches, and servers across production lines and utility areas.</li>
+          <li>Performed basic IP communication and reachability checks using ping tests and Siemens PRONETA exports.</li>
+          <li>Gained practical exposure to PLCs, HMIs, SCADA, MES, VLANs, Modbus TCP, RS-485, OPC UA, and industrial network environments.</li>
+          <li>Developed a controlled one-meter Modbus TCP pilot plan using read-only polling, timeout rules, retry logic, and maintenance-window safeguards.</li>
+          <li>Reviewed production-line systems and supported documentation of MES-related workflows and operational technology assets.</li>
+          <li>Prepared technical reports, logbook entries, system documentation, and presentations for industrial supervisors.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>EDUCATION</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Bachelor of Science in Computer Science</span>
+          <span class="entry-date">September 2022 — May 2027 (Expected)</span>
+        </div>
+        <div class="entry-company">Karatina University, Kenya</div>
+        <p style="font-size: 9pt; color: #475569; margin-top: 3px;">
+          <strong>Relevant coursework:</strong> Data Structures and Algorithms, Database Systems, Distributed Systems, Object-Oriented Programming, Software Engineering, Computer Networks, Probability and Statistics, Compiler Design, Operations Research, and Information Systems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section>
+      <h2>SELECTED PROJECTS</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Electricity and Water Intelligence System (AquaMetra)</span>
+        </div>
+        <div class="project-role-tech">Full-Stack Developer | React, FastAPI, PostgreSQL, Docker, Modbus TCP</div>
+        <ul>
+          <li>Developed a functional prototype for monitoring electricity and water consumption in industrial facilities.</li>
+          <li>Designed dashboards for trends, alarms, utility costs, intensity analysis, and operational insights; planned secure read-only Modbus TCP ingestion.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">GidyERP - SME Enterprise Resource Planning System</span>
+        </div>
+        <div class="project-role-tech">Full-Stack Developer | React, FastAPI, PostgreSQL, Docker, Nginx, Electron</div>
+        <ul>
+          <li>Designed and developed an ERP platform for inventory, customers, suppliers, purchases, sales, invoices, and warehouse operations.</li>
+          <li>Created a structured relational data model and backend API architecture with roles, authentication, backups, and deployment planning.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">AutoFlow AI - Automation and Code Analysis Prototype</span>
+        </div>
+        <div class="project-role-tech">Developer</div>
+        <ul>
+          <li>Built a local prototype for project uploads, ZIP extraction, structure scanning, issue detection, file cleaning, alerts, and technical reports.</li>
+          <li>Explored the application of artificial intelligence to software maintenance and workflow automation.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Algorithmic Trading Platform and MT5 Bot</span>
+        </div>
+        <div class="project-role-tech">Developer | Python, SQLite, MetaTrader 5</div>
+        <ul>
+          <li>Developing a data-driven platform for strategy testing, execution workflows, performance analysis, and market monitoring.</li>
+          <li>Applied backtesting concepts, risk controls, database storage, and automation principles to a practical fintech project.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2>TECHNICAL SKILLS</h2>
+      <div class="skills-grid">
+        <div class="skill-block">
+          <strong>Programming:</strong>
+          <span>Python, Java, C/C++, JavaScript, TypeScript, SQL</span>
+        </div>
+        <div class="skill-block">
+          <strong>DevOps:</strong>
+          <span>Docker, Docker Compose, Nginx, Git, GitHub, VS Code</span>
+        </div>
+        <div class="skill-block">
+          <strong>Frontend:</strong>
+          <span>React, HTML, CSS, Electron</span>
+        </div>
+        <div class="skill-block">
+          <strong>Industrial:</strong>
+          <span>Modbus TCP, RS-485, TCP/IP, Ethernet, VLANs</span>
+        </div>
+        <div class="skill-block">
+          <strong>Backend:</strong>
+          <span>FastAPI, REST APIs, authentication, API design</span>
+        </div>
+        <div class="skill-block">
+          <strong>OT Systems:</strong>
+          <span>PLCs, HMIs, SCADA, MES, OPC UA concepts</span>
+        </div>
+        <div class="skill-block">
+          <strong>Databases:</strong>
+          <span>PostgreSQL, MySQL, SQLite, relational database design</span>
+        </div>
+        <div class="skill-block">
+          <strong>Professional:</strong>
+          <span>Problem-solving, documentation, research, presentations, teamwork</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Interests -->
+    <section>
+      <h2>PROFESSIONAL INTERESTS</h2>
+      <p>
+        Software engineering, artificial intelligence, data analytics, industrial automation, cybersecurity, and entrepreneurship.
+      </p>
+    </section>
+
+    <!-- References -->
+    <section>
+      <h2>REFERENCES</h2>
+      <p>Available upon request.</p>
+    </section>
+  </main>
+</body>
+</html>

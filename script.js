@@ -237,11 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 9. CV Download Handling with Graceful Feedback
+  // 9. CV Navigation Handling
   cvButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // Show confirmation toast
-      showToast('Downloading Gideon Kamanda CV...');
+    btn.addEventListener('click', () => {
+      showToast('Opening official Curriculum Vitae...');
     });
   });
 
