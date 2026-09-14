@@ -3,38 +3,598 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Gideon Kamanda, a Nairobi-based full-stack developer and Computer Science student.">
-  <title>Gideon Kamanda — Full-Stack Developer</title>
+  <title>Gideon Kamanda — Full-Stack Developer & Industrial Systems</title>
+  <meta name="description" content="Portfolio of Gideon Kamanda: Nairobi-based full-stack developer and Computer Science student specializing in backend systems, databases, automation, and industrial IoT (Modbus TCP).">
+  
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gideon Kamanda — Full-Stack Developer & Industrial Systems">
+  <meta property="og:description" content="Building practical software for business, data, and industrial systems. Explore projects, engineering experience, and technical skills.">
+  <meta property="og:image" content="aquametra-command-center.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gideon Kamanda — Full-Stack Developer">
+  <meta name="twitter:description" content="Building practical software for business, data, and industrial systems.">
+  <meta name="twitter:image" content="aquametra-command-center.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' fill='%23ffffff' font-size='48' font-weight='900' font-family='sans-serif'>GK</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="#home"><span class="brand-mark">GK</span><span><strong>Gideon Kamanda</strong><small>Full-Stack Developer</small></span></a>
-    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
-    <div class="nav-links" id="navLinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
-    <button class="theme-button" id="themeButton" type="button" aria-label="Switch colour theme">◐</button>
-  </nav></header>
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Gideon Kamanda homepage">
+        <span class="brand-badge">GK</span>
+        <div class="brand-text">
+          <span class="brand-name">Gideon Kamanda</span>
+          <span class="brand-title">Full-Stack & Systems Developer</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Toggle -->
+        <button class="btn-icon" id="themeButton" type="button" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="btn-icon menu-toggle" id="menuButton" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <main id="main">
-    <section class="hero" id="home">
-      <div class="hero-copy"><p class="eyebrow">Nairobi, Kenya · Computer Science Student</p><h1>Building practical software for business, data, and industrial systems.</h1><p>I am Gideon Kamanda, a full-stack developer focused on software engineering, backend systems, industrial IoT, automation, and useful digital products.</p><div class="actions"><a class="button primary" href="#projects">View projects</a><a class="button secondary" href="#contact">Contact me</a></div></div>
-      <figure class="portrait"><img src="gideon-kamanda.jpg" alt="Gideon Kamanda smiling outdoors"><figcaption>Full-Stack Developer · Software Engineering & Industrial Systems</figcaption></figure>
-    </section>
-    <section class="stats" aria-label="Portfolio highlights"><article><strong>4</strong><span>Software projects</span></article><article><strong>2027</strong><span>Expected graduation</span></article><article><strong>OT/IT</strong><span>Industrial systems focus</span></article><article><strong>Kenya</strong><span>Based in Nairobi</span></article></section>
-    <section class="section" id="about"><p class="eyebrow">About</p><h2>Software built around real-world work.</h2><div class="grid two"><article class="panel"><h3>Profile</h3><p>I am a Computer Science student and full-stack developer passionate about building practical software solutions for real-world problems. My interests include backend development, databases, industrial monitoring, automation, and intelligent systems.</p></article><article class="panel"><h3>Education</h3><p><strong>Bachelor of Science in Computer Science</strong><br>Karatina University · Expected graduation 2027</p><p>Study areas include software engineering, algorithms, database systems, distributed systems, networking, AI, and computer security.</p></article></div></section>
-    <section class="section tinted" id="projects"><div class="section-head"><div><p class="eyebrow">Selected work</p><h2>Projects and prototypes.</h2></div><div class="filters" aria-label="Project filters"><button class="filter active" type="button" data-filter="all">All</button><button class="filter" type="button" data-filter="fullstack">Full stack</button><button class="filter" type="button" data-filter="industrial">Industrial</button><button class="filter" type="button" data-filter="python">Python</button></div></div>
-      <div class="grid two" id="projectGrid">
-        <article class="project" data-category="industrial fullstack"><img src="aquametra-command-center.png" alt="AquaMetra utility command center dashboard"><p class="tag">Industrial utilities intelligence</p><h3>AquaMetra</h3><p>Full-stack utility monitoring prototype for centralizing electricity, water, and meter data, with historical analysis, demand profiles, alerts, analytics, and reports.</p><p class="status">Functional prototype · Under development</p><details><summary>Technical details</summary><p>React, FastAPI, PostgreSQL, Docker, Modbus TCP, and industrial networking. The dashboard uses simulated demo data, not live production data.</p><img src="aquametra-line-10.png" alt="AquaMetra Line 10 meter intelligence dashboard"></details></article>
-        <article class="project" data-category="fullstack"><img src="gidy-erp-dashboard.png" alt="GidyERP business overview dashboard"><p class="tag">Enterprise resource planning</p><h3>GidyERP</h3><p>Full-stack ERP system for customers, suppliers, products, warehouses, inventory, invoices, expenses, user access, and audit logging.</p><p class="status">Functional project · Continuing development</p><details><summary>Technical details</summary><p>React, FastAPI, PostgreSQL, Docker, Nginx, and Electron, with web and desktop application architecture.</p></details></article>
-        <article class="project" data-category="fullstack"><div class="project-placeholder">AutoFlow<br>AI</div><p class="tag">Workflow automation</p><h3>AutoFlow AI</h3><p>Working local prototype for uploading, extracting, scanning, cleaning, and reporting on business files and data.</p><p class="status">Working local prototype · Under development</p><details><summary>Current and planned scope</summary><p>Current: file and ZIP handling, table and document scanning, data-quality alerts, and automated reports. Planned: accounts, PostgreSQL, AI assistance, workflows, email automation, integrations, and deployment.</p></details></article>
-        <article class="project" data-category="python"><div class="project-placeholder trading">MT5<br>Research</div><p class="tag">Algorithmic trading research</p><h3>Algorithmic Trading Platform</h3><p>Python-based research and automation platform for historical market data, strategy testing, risk rules, backtesting, logging, and performance analysis.</p><p class="status">In development</p><details><summary>Important note</summary><p>This is a research project and does not guarantee profits or investment returns.</p></details></article>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Nairobi, Kenya · Available for Opportunities</span>
+          </div>
+          <h1 class="hero-title">
+            Engineering <span class="text-gradient">practical software</span> for business, data, & industrial systems.
+          </h1>
+          <p class="hero-description">
+            Hi, I’m <strong>Gideon Kamanda</strong> — a full-stack software engineer and Computer Science student passionate about backend systems, industrial IoT, telemetry, automation, and reliable enterprise web products.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              Explore Projects
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+          <div class="hero-socials">
+            <a class="social-link" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/gideon-kamanda-863890294" target="_blank" rel="noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              LinkedIn
+            </a>
+            <a class="social-link" href="https://wa.me/254757843408" target="_blank" rel="noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.35 1 2.51c.12.16 1.7 2.6 4.12 3.64.58.25 1.02.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29s-1.44-.71-1.66-.79c-.22-.08-.39-.12-.55.12s-.63.79-.77.95c-.14.16-.28.18-.53.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.38.11-.5.11-.11.25-.29.38-.43.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.42-.56-.43h-.48z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="portrait-container">
+          <figure class="portrait-card">
+            <img class="portrait-img" src="gideon-kamanda.jpg" alt="Gideon Kamanda smiling outdoors">
+            <figcaption class="portrait-meta">
+              <span class="portrait-name">Gideon Kamanda</span>
+              <span class="portrait-sub">BSc Computer Science · Full-Stack & Systems</span>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
-    <section class="section" id="skills"><p class="eyebrow">Technical skills</p><h2>Tools for full-stack and industrial software.</h2><div class="skill-groups"><article><h3>Languages</h3><p>Python · Java · C · C++ · JavaScript · TypeScript · SQL</p></article><article><h3>Application development</h3><p>React · HTML · CSS · FastAPI · REST APIs · Authentication · PostgreSQL · MySQL · SQLite</p></article><article><h3>Infrastructure & industrial systems</h3><p>Docker · Nginx · Git · TCP/IP · Ethernet · VLANs · Modbus TCP · RS-485 · PLC/HMI/SCADA concepts</p></article></div></section>
-    <section class="section tinted" id="experience"><p class="eyebrow">Experience</p><h2>Automation / IT Intern</h2><div class="timeline"><article><time>2026 — September 2026</time><h3>Coca-Cola Beverages Kenya · Nairobi</h3><p>Practical exposure to industrial Ethernet, fibre uplinks, switches, servers, VPN connectivity, IP networking, utility meters, Modbus TCP, device testing, OT/IT networking, technical documentation, and cybersecurity risk assessment.</p></article></div></section>
-    <section class="section contact" id="contact"><div><p class="eyebrow">Contact</p><h2>Let’s build something useful.</h2><p>Available for software engineering internships, junior development roles, freelance projects, and professional networking.</p><address><a href="mailto:gideonkamanda49@gmail.com">gideonkamanda49@gmail.com</a><a href="https://wa.me/254757843408" target="_blank" rel="noreferrer">WhatsApp: +254 757 843 408</a><span>Nairobi, Kenya</span></address><div class="socials" style="display:flex;flex-wrap:wrap;gap:12px"><a class="button secondary" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">GitHub</a><a class="button secondary" href="https://www.linkedin.com/in/gideon-kamanda-863890294" target="_blank" rel="noreferrer">LinkedIn</a></div></div><form id="contactForm" class="contact-form"><label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label><label>Message<textarea name="message" rows="5" required></textarea></label><button class="button primary" type="submit">Prepare message</button><p id="formStatus" role="status"></p></form></section>
+
+    <!-- Stats Banner -->
+    <section class="container" aria-label="Key Highlights">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-number">4+</span>
+          <span class="stat-label">Software Projects</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">2027</span>
+          <span class="stat-label">Expected BSc Graduation</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">OT / IT</span>
+          <span class="stat-label">Industrial Systems & IoT</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-number">Nairobi</span>
+          <span class="stat-label">Kenya (GMT+3)</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">Software built around real-world work.</h2>
+          <p class="section-lead">Bridging modern software engineering with industrial data, automation, and distributed systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <h3 class="card-title">Profile & Focus</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                I am a Computer Science student and full-stack developer dedicated to building practical, high-utility software. Rather than focusing solely on user interfaces, my interests lie deeply in backend architecture, databases, automated workflows, and industrial hardware-to-cloud integrations.
+              </p>
+              <p>
+                I enjoy tackling telemetry challenges, implementing industrial protocols like Modbus TCP, optimizing relational databases with PostgreSQL, and developing modern, responsive web dashboards with React and FastAPI.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <h3 class="card-title">Education</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                <strong>Bachelor of Science in Computer Science</strong><br>
+                Karatina University · Expected Graduation: 2027
+              </p>
+              <p>
+                Comprehensive academic background covering core computational disciplines:
+              </p>
+              <div class="coursework-pills">
+                <span class="pill">Software Engineering</span>
+                <span class="pill">Algorithms & Data Structures</span>
+                <span class="pill">Database Systems</span>
+                <span class="pill">Distributed Systems</span>
+                <span class="pill">Computer Networks</span>
+                <span class="pill">Artificial Intelligence</span>
+                <span class="pill">Computer Security</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Projects -->
+    <section class="section section-tinted" id="projects">
+      <div class="container">
+        <div class="projects-header-wrapper">
+          <div>
+            <span class="eyebrow">Featured Work</span>
+            <h2 class="section-title">Selected Projects & Prototypes</h2>
+          </div>
+          <!-- Category Filters -->
+          <div class="filter-group" role="tablist" aria-label="Filter projects">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="fullstack">Full Stack</button>
+            <button class="filter-btn" type="button" data-filter="industrial">Industrial IoT</button>
+            <button class="filter-btn" type="button" data-filter="python">Python</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectGrid">
+          <!-- Project 1: AquaMetra -->
+          <article class="project-card" data-category="industrial fullstack">
+            <div class="project-media" data-img-src="aquametra-command-center.png" data-img-title="AquaMetra — Utility Command Center" tabindex="0" role="button" aria-label="View AquaMetra Command Center screenshot in high resolution">
+              <img src="aquametra-command-center.png" alt="AquaMetra utility command center dashboard" loading="lazy">
+              <div class="media-overlay">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                Click to inspect screenshot
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Industrial Utilities Intelligence</span>
+              <h3 class="project-title">AquaMetra</h3>
+              <p class="project-desc">
+                Full-stack utility monitoring platform for centralizing electricity, water, and meter telemetry. Provides real-time demand curves, historical trend analysis, automated threshold alerts, and compliance reporting.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Modbus TCP</span>
+                <span class="tech-tag">RS-485</span>
+              </div>
+              <details class="project-details">
+                <summary>Architecture & Meter Telemetry Details</summary>
+                <p>Designed with microservices using Docker containers. Simulates plant-wide Modbus TCP communication across utility lines with sub-second polling and PostgreSQL time-series storage.</p>
+                <img class="project-details-img" src="aquametra-line-10.png" alt="AquaMetra Line 10 meter intelligence dashboard" data-img-src="aquametra-line-10.png" data-img-title="AquaMetra — Line 10 Telemetry Dashboard" loading="lazy">
+              </details>
+              <div class="project-footer">
+                <span class="project-status">● Functional Prototype</span>
+                <div class="project-links">
+                  <button class="btn btn-secondary btn-sm preview-btn" type="button" data-img-src="aquametra-command-center.png" data-img-title="AquaMetra Command Center">Preview</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: GidyERP -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-media" data-img-src="gidy-erp-dashboard.png" data-img-title="GidyERP — Business Overview Dashboard" tabindex="0" role="button" aria-label="View GidyERP dashboard screenshot in high resolution">
+              <img src="gidy-erp-dashboard.png" alt="GidyERP business overview dashboard" loading="lazy">
+              <div class="media-overlay">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                Click to inspect screenshot
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Enterprise Resource Planning</span>
+              <h3 class="project-title">GidyERP</h3>
+              <p class="project-desc">
+                Modular ERP system managing customers, suppliers, inventory across multiple warehouses, invoice creation, expense tracking, role-based user access controls (RBAC), and detailed audit logs.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Electron</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Nginx</span>
+              </div>
+              <details class="project-details">
+                <summary>System & Deployment Scope</summary>
+                <p>Engineered for both cloud-hosted web deployment and offline-first desktop packaging using Electron, backed by secure JWT authentication and PostgreSQL relational constraints.</p>
+              </details>
+              <div class="project-footer">
+                <span class="project-status">● Active Project</span>
+                <div class="project-links">
+                  <button class="btn btn-secondary btn-sm preview-btn" type="button" data-img-src="gidy-erp-dashboard.png" data-img-title="GidyERP Dashboard">Preview</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: AutoFlow AI -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-media" style="cursor: default;">
+              <div class="project-placeholder">
+                <div class="placeholder-icon">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <div class="placeholder-title">AutoFlow AI</div>
+                <div class="placeholder-sub">Intelligent Workflow Engine</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Workflow Automation</span>
+              <h3 class="project-title">AutoFlow AI</h3>
+              <p class="project-desc">
+                Automated document parsing engine for uploading, extracting, cleaning, and validating structured tables from business spreadsheets and documents with data-quality alert reporting.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Data Cleaning</span>
+                <span class="tech-tag">AI Workflows</span>
+              </div>
+              <details class="project-details">
+                <summary>Roadmap & Integration</summary>
+                <p>Handles ZIP archives and Excel/CSV sanitization locally. Upcoming enhancements include cloud storage hooks, automated email dispatch, and LLM-assisted schema reconciliation.</p>
+              </details>
+              <div class="project-footer">
+                <span class="project-status">● Prototype</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Algorithmic Trading Platform -->
+          <article class="project-card" data-category="python">
+            <div class="project-media" style="cursor: default;">
+              <div class="project-placeholder trading">
+                <div class="placeholder-icon">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                </div>
+                <div class="placeholder-title">MT5 Research Engine</div>
+                <div class="placeholder-sub">Algorithmic Backtesting & Execution</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Algorithmic Trading Research</span>
+              <h3 class="project-title">Algorithmic Trading Platform</h3>
+              <p class="project-desc">
+                Python-based quantitative research and execution architecture interfacing with MetaTrader 5. Provides tick data acquisition, strategy backtesting, position sizing rules, and automated execution logging.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MetaTrader 5</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Risk Modeling</span>
+                <span class="tech-tag">Backtesting</span>
+              </div>
+              <details class="project-details">
+                <summary>Research Methodology</summary>
+                <p>Designed strictly for algorithmic research, historical simulation, and quantitative risk evaluation. Features parameter optimization with strict draw-down safety constraints.</p>
+              </details>
+              <div class="project-footer">
+                <span class="project-status">● In Development</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Capabilities</span>
+          <h2 class="section-title">Technical Skills & Tooling</h2>
+          <p class="section-lead">Technologies I use for building reliable full-stack and industrial software.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <article class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="skill-card-title">Languages</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">C</span>
+              <span class="skill-badge">C++</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">SQL</span>
+            </div>
+          </article>
+
+          <!-- Category 2 -->
+          <article class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="skill-card-title">Application & Backend</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">FastAPI</span>
+              <span class="skill-badge">REST APIs</span>
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">MySQL</span>
+              <span class="skill-badge">SQLite</span>
+              <span class="skill-badge">Auth / JWT</span>
+              <span class="skill-badge">HTML5 / CSS3</span>
+            </div>
+          </article>
+
+          <!-- Category 3 -->
+          <article class="skill-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+            </div>
+            <h3 class="skill-card-title">Industrial & Infrastructure</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">Nginx</span>
+              <span class="skill-badge">Git & GitHub</span>
+              <span class="skill-badge">Modbus TCP</span>
+              <span class="skill-badge">RS-485</span>
+              <span class="skill-badge">TCP/IP & VLANs</span>
+              <span class="skill-badge">PLC / SCADA Concepts</span>
+              <span class="skill-badge">Cybersecurity Basics</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section section-tinted" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Work History</span>
+          <h2 class="section-title">Industry Experience</h2>
+          <p class="section-lead">Hands-on application of networking, OT/IT infrastructure, and automation systems.</p>
+        </div>
+
+        <article class="experience-card">
+          <div class="experience-top">
+            <div>
+              <h3 class="role-title">Automation & IT Intern</h3>
+              <p class="company-name">Coca-Cola Beverages Kenya · Nairobi</p>
+            </div>
+            <span class="role-duration">2026 — Sept 2026</span>
+          </div>
+          <ul class="experience-points">
+            <li>
+              Gained direct operational exposure to enterprise-grade industrial Ethernet, fibre uplinks, managed Cisco/industrial switches, servers, and VPN connectivity in an active manufacturing facility.
+            </li>
+            <li>
+              Validated and monitored industrial field instrumentation, utility power and water meters using Modbus TCP and RS-485 serial communication protocols.
+            </li>
+            <li>
+              Assisted senior engineering personnel with plant OT/IT network integration, IP addressing schemes, subnetting, VLAN segmentation, and device troubleshooting.
+            </li>
+            <li>
+              Participated in technical documentation, standard operating procedure (SOP) drafting, and industrial cybersecurity risk assessments for operational continuity.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="section-title">Let’s Build Something Meaningful</h2>
+          <p class="section-lead">Open to software engineering internships, junior developer roles, industrial automation projects, and engineering conversations.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Information -->
+          <div class="contact-info">
+            <div class="contact-methods">
+              <!-- Email card with Copy button -->
+              <div class="contact-method-card">
+                <div class="method-details">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <span class="method-label">Direct Email</span>
+                    <a class="method-value" href="mailto:gideonkamanda49@gmail.com" id="emailText">gideonkamanda49@gmail.com</a>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-sm" id="copyEmailBtn" type="button" aria-label="Copy email address to clipboard">
+                  Copy
+                </button>
+              </div>
+
+              <!-- WhatsApp card -->
+              <a class="contact-method-card" href="https://wa.me/254757843408" target="_blank" rel="noreferrer">
+                <div class="method-details">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  </div>
+                  <div>
+                    <span class="method-label">WhatsApp Direct Chat</span>
+                    <span class="method-value">+254 757 843 408</span>
+                  </div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+
+              <!-- Location card -->
+              <div class="contact-method-card">
+                <div class="method-details">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <span class="method-label">Location</span>
+                    <span class="method-value">Nairobi, Kenya (GMT+3)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div style="display: flex; gap: 12px; margin-top: 8px;">
+              <a class="btn btn-secondary btn-sm" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+                GitHub Profile ↗
+              </a>
+              <a class="btn btn-secondary btn-sm" href="https://www.linkedin.com/in/gideon-kamanda-863890294" target="_blank" rel="noreferrer">
+                LinkedIn Profile ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="senderName">Your Name</label>
+                <input class="form-input" type="text" id="senderName" name="name" required placeholder="Jane Doe">
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail">Email Address</label>
+                <input class="form-input" type="email" id="senderEmail" name="email" required placeholder="jane@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage">Message</label>
+                <textarea class="form-textarea" id="senderMessage" name="message" rows="4" required placeholder="Let's discuss an engineering project or role..."></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><p>© <span id="year"></span> Gideon Kamanda. All rights reserved.</p><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></footer>
+
+  <!-- Image Lightbox Modal (<dialog>) -->
+  <dialog class="modal-dialog" id="imageModal" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modalTitle">Project Preview</h3>
+      <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Close image preview">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img id="modalImg" src="" alt="Full size project preview">
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast" id="toastNotification" role="alert" aria-live="assertive">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">Email address copied to clipboard!</span>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-copy">
+        © <span id="currentYear"></span> Gideon Kamanda. All rights reserved.
+      </p>
+      <div class="footer-links">
+        <a class="footer-link" href="#home">Back to top ↑</a>
+        <a class="footer-link" href="#about">About</a>
+        <a class="footer-link" href="#projects">Projects</a>
+        <a class="footer-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
