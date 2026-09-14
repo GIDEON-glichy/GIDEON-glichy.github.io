@@ -247,7 +247,7 @@ button, input, textarea {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .nav-links {
@@ -295,7 +295,7 @@ button, input, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Section
+   Hero Section & Dynamic Typing
    -------------------------------------------------------------------------- */
 .hero-section {
   padding: 70px 0 80px;
@@ -347,17 +347,32 @@ button, input, textarea {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.04em;
   margin-bottom: 20px;
+  min-height: 2.3em;
 }
 
-.hero-title .text-gradient {
+.dynamic-typed {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.typed-cursor {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 400;
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-description {
@@ -372,7 +387,7 @@ button, input, textarea {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-bottom: 36px;
 }
 
@@ -382,6 +397,7 @@ button, input, textarea {
   gap: 14px;
   padding-top: 20px;
   border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -457,7 +473,7 @@ button, input, textarea {
   justify-content: center;
   gap: 8px;
   min-height: 48px;
-  padding: 10px 22px;
+  padding: 10px 20px;
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.95rem;
@@ -493,10 +509,22 @@ button, input, textarea {
   transform: translateY(-1px);
 }
 
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-accent);
+  color: var(--text-muted);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--bg-subtle);
+}
+
 .btn-sm {
-  min-height: 38px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: 0.835rem;
   border-radius: var(--radius-sm);
 }
 
@@ -544,12 +572,13 @@ button, input, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   About Section
+   About Section & Competencies
    -------------------------------------------------------------------------- */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  margin-bottom: 24px;
 }
 
 .card {
@@ -612,6 +641,39 @@ button, input, textarea {
   background-color: var(--bg-subtle);
   color: var(--text-muted);
   border: 1px solid var(--border-subtle);
+}
+
+/* Competencies Banner */
+.competencies-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.comp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comp-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comp-desc {
+  font-size: 0.8875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------
@@ -805,6 +867,74 @@ button, input, textarea {
   border: 1px solid var(--border-subtle);
 }
 
+/* --------------------------------------------------------------------------
+   Interactive Architecture Flow Diagram (AquaMetra)
+   -------------------------------------------------------------------------- */
+.arch-diagram-box {
+  background-color: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin: 16px 0 8px;
+}
+
+.arch-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  position: relative;
+}
+
+.arch-node {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+.node-icon {
+  color: var(--primary);
+}
+
+.node-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.node-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.node-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
 .project-footer {
   display: flex;
   align-items: center;
@@ -812,6 +942,8 @@ button, input, textarea {
   padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .project-status {
@@ -823,7 +955,7 @@ button, input, textarea {
   color: var(--accent);
 }
 
-.project-links {
+.project-actions {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1278,6 +1410,14 @@ button, input, textarea {
     grid-template-columns: 1fr 1fr;
   }
   
+  .competencies-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .arch-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1341,5 +1481,9 @@ button, input, textarea {
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+  
+  .arch-flow {
+    grid-template-columns: 1fr;
   }
 }

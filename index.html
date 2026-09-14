@@ -44,9 +44,15 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- Download CV Header Button -->
+        <a class="btn btn-secondary btn-sm cv-btn" href="resume.pdf" download="Gideon_Kamanda_Resume.pdf" id="navCvBtn" title="Download Curriculum Vitae">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>CV</span>
+        </a>
+
         <!-- Dark/Light Theme Toggle -->
         <button class="btn-icon" id="themeButton" type="button" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -72,7 +78,7 @@
   </header>
 
   <main id="main">
-    <!-- Hero Section -->
+    <!-- Hero Section with Dynamic Typing -->
     <section class="section hero-section" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -80,19 +86,31 @@
             <span class="status-dot"></span>
             <span>Nairobi, Kenya · Available for Opportunities</span>
           </div>
+          
           <h1 class="hero-title">
-            Engineering <span class="text-gradient">practical software</span> for business, data, & industrial systems.
+            Engineering software for <br>
+            <span class="dynamic-typed" id="dynamicTyped">Industrial IoT</span><span class="typed-cursor">|</span>
           </h1>
+
           <p class="hero-description">
-            Hi, I’m <strong>Gideon Kamanda</strong> — a full-stack software engineer and Computer Science student passionate about backend systems, industrial IoT, telemetry, automation, and reliable enterprise web products.
+            Hi, I’m <strong>Gideon Kamanda</strong> — a full-stack developer and Computer Science student passionate about backend systems, industrial IoT telemetry, automation pipelines, and robust enterprise software.
           </p>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects">
               Explore Projects
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
             </a>
-            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+
+            <!-- Download CV Hero Button -->
+            <a class="btn btn-secondary cv-btn" href="resume.pdf" download="Gideon_Kamanda_Resume.pdf" id="heroCvBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download CV
+            </a>
+
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
           </div>
+
           <div class="hero-socials">
             <a class="social-link" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -143,7 +161,7 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section & Core Competencies -->
     <section class="section" id="about">
       <div class="container">
         <div class="section-header">
@@ -162,7 +180,7 @@
             </div>
             <div class="card-body">
               <p>
-                I am a Computer Science student and full-stack developer dedicated to building practical, high-utility software. Rather than focusing solely on user interfaces, my interests lie deeply in backend architecture, databases, automated workflows, and industrial hardware-to-cloud integrations.
+                I am a Computer Science student and full-stack developer dedicated to building high-utility, robust software. Rather than focusing solely on user interfaces, my engineering passion is centered around backend architecture, relational data modeling, industrial telemetry, and hardware-to-cloud workflows.
               </p>
               <p>
                 I enjoy tackling telemetry challenges, implementing industrial protocols like Modbus TCP, optimizing relational databases with PostgreSQL, and developing modern, responsive web dashboards with React and FastAPI.
@@ -175,7 +193,7 @@
               <div class="card-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               </div>
-              <h3 class="card-title">Education</h3>
+              <h3 class="card-title">Education & Focus</h3>
             </div>
             <div class="card-body">
               <p>
@@ -183,7 +201,7 @@
                 Karatina University · Expected Graduation: 2027
               </p>
               <p>
-                Comprehensive academic background covering core computational disciplines:
+                Rigorous coursework and hands-on laboratory study in computational systems:
               </p>
               <div class="coursework-pills">
                 <span class="pill">Software Engineering</span>
@@ -196,6 +214,31 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- Competencies & Specializations Card -->
+        <div class="competencies-card">
+          <div class="comp-item">
+            <h4 class="comp-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              OT / IT Architecture
+            </h4>
+            <p class="comp-desc">Integrating industrial field hardware (Modbus TCP, RS-485, PLC/SCADA concepts) into unified web telemetry platforms.</p>
+          </div>
+          <div class="comp-item">
+            <h4 class="comp-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              Backend & Data Systems
+            </h4>
+            <p class="comp-desc">High-throughput APIs with FastAPI, asynchronous task processing, PostgreSQL database design, and Docker containerization.</p>
+          </div>
+          <div class="comp-item">
+            <h4 class="comp-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+              Industrial Networking
+            </h4>
+            <p class="comp-desc">Enterprise industrial switches, fibre uplinks, VLAN segmentations, IP subnetting, and cybersecurity risk mitigations.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -233,6 +276,7 @@
               <p class="project-desc">
                 Full-stack utility monitoring platform for centralizing electricity, water, and meter telemetry. Provides real-time demand curves, historical trend analysis, automated threshold alerts, and compliance reporting.
               </p>
+              
               <div class="project-tech">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">FastAPI</span>
@@ -241,14 +285,50 @@
                 <span class="tech-tag">Modbus TCP</span>
                 <span class="tech-tag">RS-485</span>
               </div>
+
+              <!-- Interactive Architecture Pipeline Diagram -->
+              <div class="arch-diagram-box">
+                <div class="arch-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  Hardware-to-Cloud Telemetry Pipeline
+                </div>
+                <div class="arch-flow">
+                  <div class="arch-node">
+                    <span class="node-icon">⚡</span>
+                    <span class="node-label">Field Meters</span>
+                    <span class="node-sub">Modbus TCP / RS-485</span>
+                  </div>
+                  <div class="arch-node">
+                    <span class="node-icon">🔄</span>
+                    <span class="node-label">Edge Gateway</span>
+                    <span class="node-sub">FastAPI Polling</span>
+                  </div>
+                  <div class="arch-node">
+                    <span class="node-icon">🗄️</span>
+                    <span class="node-label">Time-Series DB</span>
+                    <span class="node-sub">PostgreSQL & Docker</span>
+                  </div>
+                  <div class="arch-node">
+                    <span class="node-icon">📊</span>
+                    <span class="node-label">Command Center</span>
+                    <span class="node-sub">React Real-time UI</span>
+                  </div>
+                </div>
+              </div>
+
               <details class="project-details">
                 <summary>Architecture & Meter Telemetry Details</summary>
                 <p>Designed with microservices using Docker containers. Simulates plant-wide Modbus TCP communication across utility lines with sub-second polling and PostgreSQL time-series storage.</p>
                 <img class="project-details-img" src="aquametra-line-10.png" alt="AquaMetra Line 10 meter intelligence dashboard" data-img-src="aquametra-line-10.png" data-img-title="AquaMetra — Line 10 Telemetry Dashboard" loading="lazy">
               </details>
+
               <div class="project-footer">
                 <span class="project-status">● Functional Prototype</span>
-                <div class="project-links">
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
                   <button class="btn btn-secondary btn-sm preview-btn" type="button" data-img-src="aquametra-command-center.png" data-img-title="AquaMetra Command Center">Preview</button>
                 </div>
               </div>
@@ -284,7 +364,11 @@
               </details>
               <div class="project-footer">
                 <span class="project-status">● Active Project</span>
-                <div class="project-links">
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
                   <button class="btn btn-secondary btn-sm preview-btn" type="button" data-img-src="gidy-erp-dashboard.png" data-img-title="GidyERP Dashboard">Preview</button>
                 </div>
               </div>
@@ -321,6 +405,12 @@
               </details>
               <div class="project-footer">
                 <span class="project-status">● Prototype</span>
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -355,6 +445,12 @@
               </details>
               <div class="project-footer">
                 <span class="project-status">● In Development</span>
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -463,7 +559,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Direct AJAX form -->
     <section class="section" id="contact">
       <div class="container">
         <div class="section-header">
@@ -531,7 +627,7 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
+          <!-- Contact Form with Direct AJAX Support -->
           <div class="contact-form-container">
             <form class="contact-form" id="contactForm">
               <div class="form-group">
@@ -549,8 +645,8 @@
                 <textarea class="form-textarea" id="senderMessage" name="message" rows="4" required placeholder="Let's discuss an engineering project or role..."></textarea>
               </div>
 
-              <button class="btn btn-primary" type="submit">
-                <span>Send Message</span>
+              <button class="btn btn-primary" id="submitBtn" type="submit">
+                <span id="submitBtnText">Send Message</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               </button>
               <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>

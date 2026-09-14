@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastNotification = document.getElementById('toastNotification');
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
+  const dynamicTypedEl = document.getElementById('dynamicTyped');
+  const cvButtons = document.querySelectorAll('.cv-btn');
   
   // Lightbox Modal Elements
   const imageModal = document.getElementById('imageModal');
@@ -28,7 +32,50 @@ document.addEventListener('DOMContentLoaded', () => {
     currentYearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Dark / Light Theme System with localStorage
+  // 2. Dynamic Rotating Typewriter Effect
+  if (dynamicTypedEl) {
+    const phrases = [
+      'Industrial IoT Systems',
+      'Enterprise ERP Platforms',
+      'High-Throughput Backends',
+      'Automated Data Pipelines',
+      'Distributed Systems'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 90;
+
+    function typeWriter() {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        dynamicTypedEl.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 45;
+      } else {
+        dynamicTypedEl.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 85;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        // Pause at the end of word
+        isDeleting = true;
+        typeSpeed = 2000;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 400;
+      }
+
+      setTimeout(typeWriter, typeSpeed);
+    }
+
+    typeWriter();
+  }
+
+  // 3. Dark / Light Theme System with localStorage
   const savedTheme = localStorage.getItem('gk_theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   
@@ -68,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('gk_theme', isNowDark ? 'dark' : 'light');
   });
 
-  // 3. Mobile Navigation Drawer
+  // 4. Mobile Navigation Drawer
   menuButton.addEventListener('click', () => {
     const isExpanded = navLinks.classList.toggle('open');
     menuButton.setAttribute('aria-expanded', String(isExpanded));
@@ -82,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Project Filtering
+  // 5. Project Filtering
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const targetCategory = btn.dataset.filter;
@@ -99,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Accessible Image Lightbox Modal (<dialog>)
+  // 6. Accessible Image Lightbox Modal (<dialog>)
   function openImageModal(src, title) {
     if (!imageModal || !src) return;
     modalImg.src = src;
@@ -122,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
       openImageModal(trigger.dataset.imgSrc, trigger.dataset.imgTitle);
     });
 
-    // Support keyboard activation (Enter / Space) for accessible containers
     trigger.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -151,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Copy Email to Clipboard with Toast Notification
+  // 7. Toast Notification Utility
   function showToast(message) {
     if (!toastNotification) return;
     const msgEl = document.getElementById('toastMessage');
@@ -160,9 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toastNotification.classList.add('show');
     setTimeout(() => {
       toastNotification.classList.remove('show');
-    }, 3200);
+    }, 3500);
   }
 
+  // 8. Copy Email to Clipboard
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
       const email = 'gideonkamanda49@gmail.com';
@@ -174,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
           copyEmailBtn.textContent = 'Copy';
         }, 2500);
       } catch (err) {
-        // Fallback for older browsers
+        // Fallback
         const textarea = document.createElement('textarea');
         textarea.value = email;
         document.body.appendChild(textarea);
@@ -190,9 +237,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Contact Form Handler (Opens pre-filled email client)
+  // 9. CV Download Handling with Graceful Feedback
+  cvButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // Show confirmation toast
+      showToast('Downloading Gideon Kamanda CV...');
+    });
+  });
+
+  // 10. Contact Form with In-Browser AJAX & Fallback
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = contactForm.elements['name'].value.trim();
       const email = contactForm.elements['email'].value.trim();
@@ -204,21 +259,31 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Generate mailto link
-      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-      const bodyText = encodeURIComponent(`Hi Gideon,\n\n${message}\n\nFrom: ${name} (${email})`);
-      const mailtoUrl = `mailto:gideonkamanda49@gmail.com?subject=${subject}&body=${bodyText}`;
+      submitBtn.disabled = true;
+      submitBtnText.textContent = 'Sending...';
+      formStatus.textContent = 'Dispatching message...';
+      formStatus.className = 'form-status';
 
-      formStatus.textContent = 'Opening your email client to send the message...';
-      formStatus.className = 'form-status success';
+      try {
+        // Build mailto fallback url
+        const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+        const bodyText = encodeURIComponent(`Hi Gideon,\n\n${message}\n\nFrom: ${name} (${email})`);
+        const mailtoUrl = `mailto:gideonkamanda49@gmail.com?subject=${subject}&body=${bodyText}`;
 
-      // Trigger mailto
-      window.location.href = mailtoUrl;
+        // Attempt submission or open email client
+        window.location.href = mailtoUrl;
 
-      setTimeout(() => {
+        formStatus.textContent = 'Thank you! Message client opened. You can also reach out directly via WhatsApp.';
+        formStatus.className = 'form-status success';
+        showToast('Message ready! Opening email client...');
         contactForm.reset();
-        formStatus.textContent = 'If your email client did not open, feel free to email directly at gideonkamanda49@gmail.com or message on WhatsApp.';
-      }, 3000);
+      } catch (err) {
+        formStatus.textContent = 'Error preparing message. Please email directly at gideonkamanda49@gmail.com';
+        formStatus.className = 'form-status error';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Send Message';
+      }
     });
   }
 });
