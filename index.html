@@ -143,7 +143,7 @@
     <section class="container" aria-label="Key Highlights">
       <div class="stats-grid">
         <article class="stat-card">
-          <span class="stat-number">4+</span>
+          <span class="stat-number">7+</span>
           <span class="stat-label">Software Projects</span>
         </article>
         <article class="stat-card">
@@ -258,6 +258,7 @@
           <div class="filter-group" role="tablist" aria-label="Filter projects">
             <button class="filter-btn active" type="button" data-filter="all">All</button>
             <button class="filter-btn" type="button" data-filter="fullstack">Full Stack</button>
+            <button class="filter-btn" type="button" data-filter="mobile">Mobile & AI</button>
             <button class="filter-btn" type="button" data-filter="industrial">Industrial IoT</button>
             <button class="filter-btn" type="button" data-filter="python">Python</button>
           </div>
@@ -378,6 +379,137 @@
             </div>
           </article>
 
+          <!-- Project: Planora -->
+          <article class="project-card" data-category="mobile fullstack">
+            <div class="project-media" data-img-src="planora-demo.gif" data-img-title="Planora — Student Workspace & Planner" tabindex="0" role="button" aria-label="View Planora interactive demo in high resolution">
+              <img src="planora-demo.gif" alt="Planora mobile student workspace demo" loading="lazy">
+              <div class="media-overlay">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                Click to inspect demo
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Cross-Platform Student Hub</span>
+              <h3 class="project-title">Planora — Student Workspace & Planner</h3>
+              <p class="project-desc">
+                Cross-platform mobile workspace designed for university students. Features Notion-style database views (Kanban boards, spreadsheet tables), interactive timetable management, ringing alarm integration, task tracking, and offline SQLite storage.
+              </p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo SDK 57</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Notion Views</span>
+                <span class="tech-tag">Exact Alarms</span>
+              </div>
+
+              <details class="project-details">
+                <summary>Features & Architecture Scope</summary>
+                <p>Engineered with Expo Router and local SQLite encryption. Implements calendar grid event chips, sound chime notifications, CSV/ICS timetable imports and exports, and offline-first reactive state management.</p>
+              </details>
+
+              <div class="project-footer">
+                <span class="project-status">● v2.0 Released</span>
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy/Planora" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <button class="btn btn-secondary btn-sm preview-btn" type="button" data-img-src="planora-demo.gif" data-img-title="Planora — Interactive Student Workspace Demo">Preview</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: Nova -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-media" style="cursor: default;">
+              <div class="project-placeholder nova">
+                <div class="placeholder-icon">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </div>
+                <div class="placeholder-title">Nova Voice AI</div>
+                <div class="placeholder-sub">Intelligent Android Voice Assistant</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">AI Voice Assistant & Automation</span>
+              <h3 class="project-title">Nova — Android AI Voice Assistant</h3>
+              <p class="project-desc">
+                Privacy-first Android assistant built with Jetpack Compose. Combines continuous on-device wake-word detection with Google Gemini AI conversational intelligence, local hardware action dispatching, and secure API key storage.
+              </p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">Kotlin</span>
+                <span class="tech-tag">Jetpack Compose</span>
+                <span class="tech-tag">Gemini AI</span>
+                <span class="tech-tag">Wake Word</span>
+                <span class="tech-tag">System Actions</span>
+                <span class="tech-tag">EncryptedSharedPreferences</span>
+              </div>
+
+              <details class="project-details">
+                <summary>AI Reasoning & Hardware Controls</summary>
+                <p>Features animated Material 3 Nova Orb visualizer, structured intent router with risk validation, hands-free hardware execution (flashlight, alarms, volume, media), and AES-256 KeyStore encryption for zero data leakage.</p>
+              </details>
+
+              <div class="project-footer">
+                <span class="project-status">● Active Project</span>
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy/Nova" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project: StudentSpend -->
+          <article class="project-card" data-category="mobile">
+            <div class="project-media" style="cursor: default;">
+              <div class="project-placeholder studentspend">
+                <div class="placeholder-icon">
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><circle cx="16" cy="15" r="1"/></svg>
+                </div>
+                <div class="placeholder-title">StudentSpend</div>
+                <div class="placeholder-sub">Offline Budget & M-PESA Tracker</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag">Fintech & Mobile Automation</span>
+              <h3 class="project-title">StudentSpend — Student Budget & M-PESA Tracker</h3>
+              <p class="project-desc">
+                Native Android budget tracker designed for students. Automatically intercepts and parses M-PESA SMS confirmations, categorizes expenditures, manages monthly budget thresholds with alerts, and computes weekly insights.
+              </p>
+              
+              <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Android SDK</span>
+                <span class="tech-tag">M-PESA Parser</span>
+                <span class="tech-tag">Offline Ledger</span>
+                <span class="tech-tag">AES Encryption</span>
+                <span class="tech-tag">SMS Receiver</span>
+              </div>
+
+              <details class="project-details">
+                <summary>Privacy & Offline-First Design</summary>
+                <p>Zero internet permissions requested. Implements local receipt deduplication, encrypted password-protected backup/restore, custom budget alerts, and Monday-to-Sunday weekly analytics under Nairobi local time.</p>
+              </details>
+
+              <div class="project-footer">
+                <span class="project-status">● v0.3.0 Personal Beta</span>
+                <div class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/GIDEON-glichy/StudentSpend" target="_blank" rel="noreferrer">
+                    <span>Code</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <!-- Project 3: AutoFlow AI -->
           <article class="project-card" data-category="fullstack">
             <div class="project-media" style="cursor: default;">
@@ -471,14 +603,17 @@
             <h3 class="skill-card-title">Programming & Frontend</h3>
             <div class="skill-badges">
               <span class="skill-badge">Python</span>
+              <span class="skill-badge">Kotlin</span>
               <span class="skill-badge">Java</span>
-              <span class="skill-badge">C / C++</span>
-              <span class="skill-badge">JavaScript</span>
               <span class="skill-badge">TypeScript</span>
-              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">JavaScript</span>
               <span class="skill-badge">React</span>
-              <span class="skill-badge">HTML5</span>
-              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">React Native</span>
+              <span class="skill-badge">Expo</span>
+              <span class="skill-badge">Jetpack Compose</span>
+              <span class="skill-badge">C / C++</span>
+              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">HTML5 / CSS3</span>
               <span class="skill-badge">Electron</span>
             </div>
           </article>
@@ -491,12 +626,13 @@
             <h3 class="skill-card-title">Backend & Databases</h3>
             <div class="skill-badges">
               <span class="skill-badge">FastAPI</span>
+              <span class="skill-badge">Gemini AI API</span>
               <span class="skill-badge">REST APIs</span>
-              <span class="skill-badge">Authentication</span>
-              <span class="skill-badge">API Design</span>
+              <span class="skill-badge">Authentication & JWT</span>
               <span class="skill-badge">PostgreSQL</span>
               <span class="skill-badge">MySQL</span>
               <span class="skill-badge">SQLite</span>
+              <span class="skill-badge">KeyStore & Encryption</span>
               <span class="skill-badge">Relational DB Design</span>
             </div>
           </article>

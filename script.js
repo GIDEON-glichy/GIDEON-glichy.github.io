@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phrases = [
       'Industrial IoT Systems',
       'Enterprise ERP Platforms',
+      'AI & Mobile Applications',
       'High-Throughput Backends',
       'Automated Data Pipelines',
       'Distributed Systems'

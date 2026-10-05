@@ -801,6 +801,18 @@ button, input, textarea {
   background: linear-gradient(135deg, #0f172a, #0d9488);
 }
 
+.project-placeholder.nova {
+  background: linear-gradient(135deg, #1e1b4b, #4f46e5, #06b6d4);
+}
+
+.project-placeholder.studentspend {
+  background: linear-gradient(135deg, #064e3b, #059669, #10b981);
+}
+
+.project-placeholder.planora {
+  background: linear-gradient(135deg, #312e81, #4338ca, #3b82f6);
+}
+
 .placeholder-icon {
   margin-bottom: 12px;
   opacity: 0.9;
